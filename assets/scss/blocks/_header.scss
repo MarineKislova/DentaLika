@@ -1,0 +1,96 @@
+@use "utils/_mixins" as mh;
+
+.header {
+  background-color: #98aca0;
+  border-bottom: 1px solid #fff;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mh.adaptiv-value("padding-top", 16, 12, 0);
+    padding-top: 16px;
+    @include mh.adaptiv-value("padding-bottom", 16, 12, 0);
+    padding-bottom: 16px;
+    tab-size: 4;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    @include mh.adaptiv-value("gap", 15, 12, 0);
+    gap: 15px;
+    span {
+      @include mh.adaptiv-value("font-size", 20, 12, 0);
+      font-size: 20px;
+      border-radius: 50%;
+      background-color: #2f4f3e;
+      padding: 10px;
+    }
+
+    a {
+      @include mh.adaptiv-value("font-size", 24, 12, 0);
+      font-size: 24px;
+      font-weight: 800;
+      @include mh.adaptiv-value("line-height", 32, 12, 0);
+      line-height: 32px;
+      color: #51735e;
+      letter-spacing: 2px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    width: 492px;
+    height: 42px;
+    @include mh.adaptiv-value("gap", 30, 12, 0);
+    gap: 30px;
+    align-items: center;
+    @include mh.adaptiv-value("line-height", 24, 12, 0);
+    line-height: 24px;
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      @include mh.adaptiv-value("gap", 30, 12, 0);
+      gap: 30px;
+      color: rgb(47, 79, 62);
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    @include mh.adaptiv-value("font-size", 16, 12, 0);
+    font-size: 16px;
+    @include mh.adaptiv-value("gap", 10, 12, 0);
+    gap: 10px;
+    padding: 8px 24px;
+    background-color: rgba(47, 79, 62, 0.8);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+
+    &:hover {
+      background-color: rgba(47, 79, 62, 0.95);
+      box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.8);
+      box-shadow: 1px 3px 5px rgba(47, 79, 62, 0.7);
+    }
+  }
+}
+.logo {
+}
+.open-modal {
+}
+.btn {
+}
+.lucide {
+}
+.lucide-phone {
+}
+.w-4 {
+}
+.h-4 {
+}

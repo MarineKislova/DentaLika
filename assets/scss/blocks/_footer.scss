@@ -1,0 +1,77 @@
+@use "utils/_mixins" as mh;
+
+.footer {
+  // display: grid;
+  gap: 50px;
+  background-color: #fbfbfc;
+
+  // box-shadow: inset -3px 5px 8px #EEF1F1;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+    gap: 32px;
+    padding-bottom: 50px;
+  }
+
+  &__row {
+    width: 296px;
+  }
+
+  &__logo {
+  }
+
+  &__row-title {
+  }
+
+  &__links {
+  }
+
+  &__link {
+  }
+
+  &__btn {
+  }
+
+  &__row-contact {
+  }
+
+  &__row-social {
+  }
+
+  &__social-btn {
+  }
+
+  &__copyright {
+    text-align: center;
+  }
+}
+.logo {
+}
+.h5 {
+}
+.open-modal {
+}
+.lucide {
+}
+.lucide-map-pin {
+}
+.w-5 {
+}
+.h-5 {
+}
+.text-primary {
+}
+.flex-shrink-0 {
+}
+.mt-1 {
+}
+.lucide-phone {
+}
+.lucide-mail {
+}
+.lucide-instagram {
+}
+.lucide-facebook {
+}
+.lucide-twitter {
+}
