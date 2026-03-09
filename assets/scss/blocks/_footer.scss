@@ -1,48 +1,93 @@
 @use "utils/_mixins" as mh;
 
 .footer {
-  // display: grid;
   gap: 50px;
   background-color: #fbfbfc;
-
-  // box-shadow: inset -3px 5px 8px #EEF1F1;
   &__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
     gap: 32px;
-    padding-bottom: 50px;
+    @include mh.adaptiv-value("padding-left", 32, 12, 0);
+    @include mh.adaptiv-value("padding-right", 32, 12, 0);
+    @include mh.adaptiv-value("padding-top", 48, 24, 0);
+    @include mh.adaptiv-value("padding-bottom", 48, 24, 0);
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   &__row {
+    display: flex;
+    flex-direction: column;
     width: 296px;
+    line-height: 24px;
+    gap: 15px;
   }
 
   &__logo {
+    display: flex;
+    align-items: center;
+    @include mh.adaptiv-value("gap", 15, 12, 0);
+    gap: 15px;
+    span {
+      @include mh.adaptiv-value("font-size", 20, 12, 0);
+      font-size: 20px;
+      border-radius: 50%;
+      background-color: #2f4f3e;
+      padding: 10px;
+    }
+
+    a {
+      @include mh.adaptiv-value("font-size", 24, 12, 0);
+      font-size: 24px;
+      font-weight: 800;
+      @include mh.adaptiv-value("line-height", 32, 12, 0);
+      line-height: 32px;
+      color: #51735e;
+      letter-spacing: 2px;
+    }
   }
 
   &__row-title {
+    font-weight: 800;
   }
 
   &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   &__link {
+    &:hover {
+      color: #d8331d;
+      font-weight: 500;
+    }
   }
 
   &__btn {
   }
 
   &__row-contact {
+    text-align: left;
+    span {
+      padding-left: 5px;
+    }
   }
 
   &__row-social {
+    display: flex;
+    gap: 20px;
   }
 
   &__social-btn {
+    display: flex;
+    flex-direction: column;
   }
 
   &__copyright {
+    font-weight: 800;
     text-align: center;
+    @include mh.adaptiv-value("padding-bottom", 50, 25, 0);
   }
 }
 .logo {

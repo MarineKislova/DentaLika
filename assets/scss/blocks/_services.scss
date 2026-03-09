@@ -1,0 +1,60 @@
+@use "utils/_mixins" as mh;
+
+.services {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include mh.adaptiv-value("padding", 16, 12, 0);
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    color: rgb(113, 113, 130);
+    text-align: center;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 15px;
+    border-radius: 24px;
+    color: rgb(47, 79, 62);
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: rgba(47, 79, 62, 0.2) 0px 8px 32px 0px;
+    cursor: pointer;
+
+    p {
+      width: 290px;
+      line-height: 1.2;
+    }
+  }
+
+  &__card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background-color: #b0e2e2;
+  }
+
+  &__card-columns {
+    display: flex;
+  }
+}

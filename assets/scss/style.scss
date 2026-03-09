@@ -7,7 +7,13 @@
 
 // блоки
 @use "blocks/_header.scss";
+@use "blocks/_hero.scss";
+@use "blocks/_services.scss";
 @use "blocks/_footer.scss";
+
+html {
+  scroll-behavior: smooth;
+}
 
 .wrapper {
   min-height: 100%;
@@ -26,15 +32,17 @@
   margin: 0 auto;
 }
 
+.anchor{
+  height: 75px;
+}
+
 h1 {
-  @include mSt.adaptiv-value("font-size", 60, 12, 0);
-  font-size: 60px;
+  @include mSt.adaptiv-value("font-size", 60, 40, 0);
   color: #ffffff;
 }
 
 h2 {
-  @include mSt.adaptiv-value("font-size", 48, 12, 0);
-  font-size: 48px;
+  @include mSt.adaptiv-value("font-size", 48, 36, 0);
   color: rgb(47, 79, 62);
 }
 
@@ -60,4 +68,9 @@ btn {
   @include mSt.adaptiv-value("font-size", 16, 12, 0);
   font-size: 16px;
   color: #3a5848;
+}
+
+
+.open {
+  display: flex !important;
 }

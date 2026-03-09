@@ -10,11 +10,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include mh.adaptiv-value("padding-top", 16, 12, 0);
-    padding-top: 16px;
-    @include mh.adaptiv-value("padding-bottom", 16, 12, 0);
-    padding-bottom: 16px;
     tab-size: 4;
+    @include mh.adaptiv-value("padding", 16, 12, 0);
   }
 
   &__logo {
@@ -93,4 +90,115 @@
 .w-4 {
 }
 .h-4 {
+}
+
+.burger {
+  // display: flex;
+  display: none;
+  position: relative;
+  // z-index: 50000;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50px;
+  height: 35px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+
+  span {
+    height: 6px;
+    width: 80%;
+    transform: scale(1);
+    background: #d8331d;
+    border-radius: 9px;
+    transition: 0.25s ease-in-out;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    border-radius: 9px;
+    background-color: #d8331d;
+    transition: all 0.3s ease 0s;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  //add active class for animation burger icon
+  // &.active span in CSS will be without space (.burger.active)
+  // .active span in CSS will be with space (.burger. active)
+  &.active span {
+    transform: scale(0);
+  }
+  //add active class for animation burger lines
+  &.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+  }
+  &.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .header__right {
+    display: none;
+  }
+
+  .hamburger {
+    // display: flex;
+    display: none;
+    flex-direction: column;
+    z-index: 10;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 8%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5000;
+    overflow-y: auto;
+    padding: 50px 40px;
+    background-color: rgba(152, 172, 160, 0.9);
+    animation: burgerAnimation 1s;
+    row-gap: 30px;
+
+    ul.li {
+      color: #462a0b;
+      border-bottom: 2px solid #2F4F3E;
+      pad: 5px;
+      width: 20px;
+      font-weight: 500;
+      @include mh.adaptiv-value("font-size", 20, 18, 0);
+    }
+  }
+}
+
+@keyframes burgerAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

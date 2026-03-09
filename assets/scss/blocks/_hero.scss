@@ -1,0 +1,131 @@
+@use "utils/_mixins" as mh;
+
+.hero {
+  background: linear-gradient(135deg, rgb(47, 79, 62), rgb(74, 114, 88), rgb(199, 199, 199));
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    @include mh.adaptiv-value("padding-left", 32, 12, 0);
+    @include mh.adaptiv-value("padding-right", 32, 12, 0);
+    @include mh.adaptiv-value("padding-top", 80, 40, 0);
+    @include mh.adaptiv-value("padding-bottom", 80, 40, 0);
+    color: #fafbfb;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 584px;
+    padding: 26px;
+    @include mh.adaptiv-value("gap", 25, 13, 0);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: rgba(47, 79, 62, 0.15) 0px 8px 32px 0px;
+    border-radius: 24px;
+
+    h1 {
+      text-justify: auto;
+    }
+
+    p {
+      line-height: 1.5;
+      text-align: justify;
+      text-justify: auto;
+
+      &:nth-child(1) {
+        width: 290px;
+        padding: 8px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: rgba(47, 79, 62, 0.15) 0px 8px 32px 0px;
+        border-radius: 16px;
+      }
+    }
+  }
+
+  &__left-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  &__left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 162px;
+    gap: 5px;
+    padding: 14px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: rgba(47, 79, 62, 0.15) 0px 8px 32px 0px;
+    border-radius: 16px;
+  }
+
+  &__left-btn {
+    width: 219px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(47, 79, 62);
+    padding: 16px 32px;
+    text-align: center;
+    border-radius: 40px;
+    align-self: center;
+
+        &:hover {
+      box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.7);
+      box-shadow: 2px 5px 8px rgba(47, 79, 62, 1);
+    }
+  }
+
+  &__right {
+    max-width: 584px;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: rgba(47, 79, 62, 0.15) 0px 8px 32px 0px;
+    border-radius: 24px;
+  }
+
+  &__right-image {
+    max-height: 500px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.lucide {
+}
+.lucide-sparkles {
+}
+.w-4 {
+}
+.h-4 {
+}
+.lucide-award {
+}
+.w-8 {
+}
+.h-8 {
+}
+.text-white {
+}
+.mx-auto {
+}
+.mb-2 {
+}
+.lucide-clock {
+}
+.btn {
+}
