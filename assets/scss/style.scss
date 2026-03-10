@@ -9,6 +9,9 @@
 @use "blocks/_header.scss";
 @use "blocks/_hero.scss";
 @use "blocks/_services.scss";
+@use "blocks/_gallery.scss";
+@use "blocks/_doctors.scss";
+@use "blocks/_testimornials.scss";
 @use "blocks/_footer.scss";
 
 html {
@@ -21,14 +24,13 @@ html {
   display: flex;
   flex-direction: column;
   background-color: #F8F9FA;
-  height: 2000px;
 }
 .content {
   flex: 1 1 auto;
 }
 
 [class*="__container"] {
-  max-width: 1440px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -47,20 +49,17 @@ h2 {
 }
 
 h3 {
-  @include mSt.adaptiv-value("font-size", 24, 12, 0);
-  font-size: 24px;
+  @include mSt.adaptiv-value("font-size", 24, 18, 0);
   color: rgb(47, 79, 62);
 }
 
 h4 {
-  @include mSt.adaptiv-value("font-size", 20, 12, 0);
-  font-size: 20px;
+  @include mSt.adaptiv-value("font-size", 20, 15, 0);
   color: rgb(47, 79, 62);
 }
 
 h5 {
   @include mSt.adaptiv-value("font-size", 16, 12, 0);
-  font-size: 16px;
   color: rgb(47, 79, 62);
 }
 

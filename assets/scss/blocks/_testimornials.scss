@@ -1,0 +1,84 @@
+@use "utils/_mixins" as mh;
+
+.testimornials {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include mh.adaptiv-value("padding", 16, 12, 0);
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    color: rgb(113, 113, 130);
+    text-align: center;
+  }
+
+  &__items {
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+    width: 405px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: rgba(47, 79, 62, 0.2) 0px 8px 32px 0px;
+    border-radius: 24px;
+
+    h5{
+      font-weight: 800;
+    }
+    p{
+      font-weight: 500;
+    }
+  }
+
+  &__item-row {
+    display: flex;
+    gap: 20px;
+    img {
+      width: 100%;
+      height: 64px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  &__item-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__item-raring {
+  }
+
+  &__item-text {
+    text-align: justify;
+    text-justify: auto;
+  }
+
+  &__item-date {
+  }
+}
+.lucide {
+}
+.lucide-star {
+}
+.w-5 {
+}
+.h-5 {
+}
+.text-yellow-500 {
+}
+.fill-yellow-500 {
+}

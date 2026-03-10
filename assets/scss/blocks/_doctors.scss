@@ -1,0 +1,75 @@
+@use "utils/_mixins" as mh;
+
+.doctors {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include mh.adaptiv-value("padding", 16, 12, 0);
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    color: rgb(113, 113, 130);
+    text-align: center;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(329px, 1fr));
+    gap: 24px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: rgba(47, 79, 62, 0.2) 0px 8px 32px 0px;
+    padding: 16px;
+    border-radius: 24px;
+
+    img {
+      display: block;
+      aspect-ratio: 3 / 2;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+
+    h3 {
+      font-weight: bold;
+      color: rgb(47, 79, 62);
+      font-family: "Poppins" !important;
+    }
+
+    h5 {
+      font-weight: 600;
+    }
+
+    a {
+      align-self: center;
+      text-align: center;
+      width: 50%;
+      padding: 16px;
+      font-size: 14px;
+      color: rgb(255, 255, 255);
+      background-color: rgba(47, 79, 62, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 24px;
+
+      &:hover {
+        background-color: rgba(47, 79, 62, 0.95);
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.8);
+        box-shadow: 1px 5px 8px rgba(47, 79, 62, 0.4);
+      }
+    }
+  }
+}

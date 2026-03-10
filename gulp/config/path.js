@@ -45,5 +45,7 @@ export const path = {
   buildFolder: buildFolder,
   srcFolder: srcFolder,
   rootFolder: rootFolder,
+  swiperCss: "node_modules/swiper/swiper-bundle.min.css",
+  swiperJs: "node_modules/swiper/swiper-bundle.min.js",
   ftp: `test`, // ваш FTP-адрес, заполняем в самый последний момент при наличии FTP-сервера
 };
