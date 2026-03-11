@@ -1,0 +1,92 @@
+@use "utils/_mixins" as mh;
+
+.faq {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include mh.adaptiv-value("padding", 16, 12, 0);
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__subtitle {
+    @include mh.adaptiv-value("font-size", 20, 14, 0);
+    font-weight: 400;
+    line-height: 28px;
+    color: rgb(113, 113, 130);
+    text-align: center;
+  }
+}
+.accordion {
+  &__container {
+    display: flex;
+    justify-content: center;
+    max-width: 896px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    @include mh.adaptiv-value("gap", 20, 10, 0);
+    @include mh.adaptiv-value("padding", 20, 10, 0);
+    justify-content: center;
+    align-content: start;
+    justify-items: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    height: min-content; //!при раскрытии других не открывается body аккордеона при не активном пункте
+    width: 100%;
+    gap: 10px;
+    @include mh.adaptiv-value("padding", 24, 12, 0);
+    color: rgb(47, 79, 62);
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 24px;
+    box-shadow: rgba(47, 79, 62, 0.2) 0px 8px 32px 0px;
+    transition: background-color 0.3s ease;
+
+    &.active {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  &__item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__item-title {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  &__item-icon {
+    background-color: rgb(47, 79, 62);
+    border: 1px solid rgba(47, 79, 62, 0.1);
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+  }
+
+  &__item-body {
+    display: none;
+    line-height: 1.5;
+    text-align: justify;
+    text-justify: auto;
+  }
+}
+.accordion-item {
+}
+.accordion-toggle {
+}
+.accordion-icon {
+}
