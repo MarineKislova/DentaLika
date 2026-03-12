@@ -9,6 +9,7 @@ export const path = {
     js: `${buildFolder}/js/`,
     json: `${buildFolder}/js/data/`,
     css: `${buildFolder}/css/`,
+    icons: `${buildFolder}/icons/`,
     images: `${buildFolder}/img/`,
     fonts: `${buildFolder}/fonts/`,
     html: `${buildFolder}/`,
@@ -21,6 +22,7 @@ export const path = {
     js: `${srcFolder}/js/app.js`,
     json: `${srcFolder}/js/data/**/*.json`,
     scss: `${srcFolder}/scss/style.scss`,
+    icons: `${srcFolder}/icons/**/*.svg`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,mp4}`,
     svg: `${srcFolder}/img/**/*.svg`,
     html: `${srcFolder}/*.html`, //.pug
@@ -34,6 +36,7 @@ export const path = {
     js: `${srcFolder}/js/**/*.js`,
     json: `${srcFolder}/js/data/`,
     scss: `${srcFolder}/scss/**/*.scss`,
+    icons: `${srcFolder}/icons/**/*.svg`,
     images: `${srcFolder}img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
     html: `${srcFolder}/**/*.html`, //.pug
     ru: `${srcFolder}/**/*.html`, //.pug

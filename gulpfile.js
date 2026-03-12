@@ -28,6 +28,8 @@ import { en } from "./gulp/tasks/en.js";
 import { server } from "./gulp/tasks/server.js";
 // импорт scss из scss.js
 import { scss } from "./gulp/tasks/scss.js";
+// импорт icons из icons.js
+import { icons } from "./gulp/tasks/icons.js";
 // импорт js из js.js
 import { js } from "./gulp/tasks/js.js";
 // импорт json из json.js
@@ -57,6 +59,7 @@ function watchAssets() {
   gulp.watch(path.watch.en, en);
   gulp.watch(path.watch.scss, scss);
   gulp.watch(path.watch.scss, copySwiperCss);
+  gulp.watch(path.watch.icons, icons);
   gulp.watch(path.watch.json, json);
   gulp.watch(path.watch.other, other);
   gulp.watch(path.watch.js, js);
@@ -70,7 +73,7 @@ export { svgSpriteTask };
 const fontsTasks = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 // основные задачи для сборки проекта с использованием fonts.js
-const mainTasks = gulp.series(fontsTasks, gulp.parallel(copy, html, ru, en, scss, json, copySwiperCss, js, copySwiperJs, other, images));
+const mainTasks = gulp.series(fontsTasks, gulp.parallel(copy, html, ru, en, scss, icons, json, copySwiperCss, js, copySwiperJs, other, images));
 
 // // основные задачи для сборки проекта
 // const mainTasks = gulp.parallel(copy, html, ru, scss, json,js, images); // параллельное выполнение html и copy

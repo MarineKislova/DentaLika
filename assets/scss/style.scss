@@ -14,6 +14,7 @@
 @use "blocks/_testimornials.scss";
 @use "blocks/_faq.scss";
 @use "blocks/_contact.scss";
+@use "blocks/_pages.scss";
 @use "blocks/_footer.scss";
 
 html {
@@ -25,7 +26,7 @@ html {
   // overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
 }
 .content {
   flex: 1 1 auto;
@@ -36,8 +37,12 @@ html {
   margin: 0 auto;
 }
 
-.anchor{
-  height: 75px;
+.anchor {
+  @include mSt.adaptiv-value("height", 75, 25, 0);
+}
+
+p {
+  @include mSt.adaptiv-value("font-size", 16, 14, 0);
 }
 
 h1 {
@@ -65,12 +70,28 @@ h5 {
   color: rgb(47, 79, 62);
 }
 
-btn {
+.btn {
   @include mSt.adaptiv-value("font-size", 16, 12, 0);
   font-size: 16px;
-  color: #3a5848;
+  // color: #3a5848;
 }
 
+.breadcrumbs {
+  &__container {
+    padding: 10px;
+    ul {
+      display: flex;
+
+    }
+    li{
+      padding-left: 5px;
+      &:nth-child(5){
+        padding-left: 10px;
+        font-weight: 800;
+      }
+    }
+  }
+}
 
 .open {
   display: flex !important;

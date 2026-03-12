@@ -1,0 +1,350 @@
+@use "utils/_mixins" as mh;
+
+#whitening {
+  width: max-content;
+  padding: 8px 24px;
+  font-size: 36px;
+  background-color: #b1c7e0;
+  border-radius: 36px;
+}
+
+.service-hero {
+  background: #d1d9d6;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    @include mh.adaptiv-value("padding", 16, 12, 0);
+
+    @media (max-width: 980px) {
+      align-self: center;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 50%;
+    text-align: justify;
+    text-justify: inter-word;
+
+    p {
+      @include mh.adaptiv-value("line-height", 24, 18, 0);
+    }
+
+    @media (max-width: 980px) {
+      width: 100%;
+      align-self: center;
+
+      h2 {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 425px) {
+      width: 90%;
+      align-self: center;
+    }
+
+    @media (max-width: 320px) {
+      width: 100%;
+      align-self: center;
+    }
+  }
+
+  &__columns {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+
+  &__column {
+    @include mh.adaptiv-value("padding", 16, 8, 0);
+    @include mh.adaptiv-value("width", 284, 135, 0);
+
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: rgba(47, 79, 62, 0.15) 0px 8px 32px 0px;
+    border-radius: 16px;
+
+    p {
+      @include mh.adaptiv-value("padding-top", 10, 5, 0);
+      &:nth-child(3) {
+        @include mh.adaptiv-value("font-size", 18, 15, 0);
+        font-weight: 700;
+        line-height: 28px;
+        color: rgb(47, 79, 62);
+      }
+    }
+  }
+
+  &__btn {
+    width: 276px;
+    padding: 16px 32px;
+    font-size: 18px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgba(47, 79, 62, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 40px;
+
+    &:hover {
+      background-color: rgba(47, 79, 62, 0.95);
+      box-shadow: 0px 8px 10px 0px rgba(47, 79, 62, 0.3);
+    }
+
+    @media (max-width: 980px) {
+      align-self: center;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: min-content;
+    padding: 24px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 24px;
+    img {
+      width: 100%;
+      object-fit: contain;
+      border-radius: 24px;
+    }
+
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+}
+
+.benefits {
+  &__container {
+    @include mh.adaptiv-value("padding", 16, 12, 0);
+  }
+
+  &__title {
+    color: rgb(47, 79, 62);
+    @include mh.adaptiv-value("font-size", 32, 28, 0);
+    line-height: 1.3;
+    @include mh.adaptiv-value("padding-bottom", 48, 20, 0);
+
+    @media (max-width: 425px) {
+      text-align: center;
+    }
+  }
+
+  &__columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    @include mh.adaptiv-value("gap", 48, 20, 0);
+    // gap: 48px;
+  }
+
+  &__column {
+    display: flex;
+    align-items: center;
+    @include mh.adaptiv-value("gap", 20, 10, 0);
+    @include mh.adaptiv-value("line-height", 24, 16, 0);
+    padding: 24px;
+    color: rgb(47, 79, 62);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: rgba(47, 79, 62, 0.15) 0px 8px 32px 0px;
+  }
+}
+
+.stages {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @include mh.adaptiv-value("padding", 16, 12, 0);
+  }
+
+  &__title {
+    color: rgb(47, 79, 62);
+    @include mh.adaptiv-value("font-size", 32, 28, 0);
+    line-height: 1.3;
+    @include mh.adaptiv-value("padding-bottom", 48, 20, 0);
+
+    @media (max-width: 425px) {
+      text-align: center;
+    }
+  }
+
+  &__rows {
+    display: flex;
+    flex-direction: column;
+    @include mh.adaptiv-value("gap", 48, 20, 0);
+  }
+
+  &__row {
+    display: flex;
+    padding: 24px;
+    gap: 15px;
+    color: rgb(47, 79, 62);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: rgba(47, 79, 62, 0.15) 0px 8px 32px 0px;
+  }
+
+  &__row-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    @include mh.adaptiv-value("width", 48, 30, 0);
+    // width: 48px;
+    @include mh.adaptiv-value("height", 48, 30, 0);
+    // height: 48px;
+    background-color: rgb(47, 79, 62);
+    border-radius: 50%;
+    color: #fff;
+  }
+
+  &__row-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    p {
+      &:nth-child(1) {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+        color: rgb(47, 79, 62);
+      }
+    }
+  }
+}
+
+.other {
+  &__container {
+  }
+
+  &__columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    justify-content: space-evenly;
+    @include mh.adaptiv-value("width", 620, 280, 0);
+    padding: 36px;
+    color: rgb(47, 79, 62);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: rgba(47, 79, 62, 0.15) 0px 8px 32px 0px;
+  }
+
+  &__column-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    p {
+      @include mh.adaptiv-value("font-size", 24, 20.5, 0);
+      font-weight: 700;
+      line-height: 28px;
+      color: #2f4f3e;
+    }
+  }
+
+  &__column-items {
+    padding-top: 15px;
+  }
+
+  &__column-item {
+    line-height: 24px;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 0.2em; /* подбираем положение под первую строку текста */
+      width: 16px;
+      height: 16px;
+      background-image: url("../../icons/benefit.svg"); /* путь к вашему рисунку */
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &#warning {
+      &::before {
+        content: "";
+        position: absolute;
+        left: -5px;
+        top: 50%;
+        transform: translateY(-50%); /* центрируем точку по вертикали */
+        width: 6px;
+        height: 6px;
+        background-color: red;
+        border-radius: 50%; /* делаем круг из квадрата */
+      }
+    }
+  }
+}
+
+.start {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @include mh.adaptiv-value("gap", 20, 10, 0);
+    @include mh.adaptiv-value("width", 832, 300, 0);
+    align-items: center;
+    @include mh.adaptiv-value("padding", 48, 24, 0);
+    color: rgb(47, 79, 62);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: rgba(47, 79, 62, 0.15) 0px 8px 32px 0px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  &__title {
+    @include mh.adaptiv-value("font-size", 30, 26, 0);
+    font-weight: 700;
+    @include mh.adaptiv-value("line-height", 36, 26, 0);
+    line-height: 36px;
+    color: rgb(47, 79, 62);
+  }
+
+  &__text {
+    @include mh.adaptiv-value("font-size", 20, 16, 0);
+    @include mh.adaptiv-value("line-height", 28, 24.5, 0);
+    color: rgb(113, 113, 130);
+  }
+
+  &__link {
+    width: 272px;
+    @include mh.adaptiv-value("padding-left", 44, 16, 0);
+    @include mh.adaptiv-value("padding-right", 44, 16, 0);
+    @include mh.adaptiv-value("padding-top", 16, 8, 0);
+    @include mh.adaptiv-value("padding-bottom", 16, 8, 0);
+    @include mh.adaptiv-value("font-size", 18, 16, 0);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgba(47, 79, 62, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 36px;
+  }
+}
