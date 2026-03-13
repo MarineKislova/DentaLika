@@ -23,7 +23,7 @@ export const processImages = () => {
       .pipe(app.plugins.if(app.isBuild, app.gulp.dest(app.path.build.images))) // коируем в исходную папку
       .pipe(app.gulp.src(app.path.src.images, { encoding: false }))
       .pipe(app.plugins.if(app.isBuild, app.plugins.newer(app.path.build.images)))
-      // .pipe(app.plugins.if(app.isBuild, app.gulp.dest(app.path.build.images)))
+      .pipe(app.plugins.if(app.isBuild, app.gulp.dest(app.path.build.images)))
       // --- оптимизация исходных изображений
       .pipe(
         app.plugins.if(
