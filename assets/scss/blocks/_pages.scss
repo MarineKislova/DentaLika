@@ -225,12 +225,14 @@
 
 .other {
   &__container {
+    @include mh.adaptiv-value("padding", 16, 12, 0);
   }
 
   &__columns {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -242,10 +244,10 @@
   &__column {
     display: flex;
     flex-direction: column;
-    height: max-content;
+    height: min-content;
     justify-content: space-evenly;
     @include mh.adaptiv-value("width", 620, 280, 0);
-    padding: 36px;
+    padding: 32px;
     color: rgb(47, 79, 62);
     background-color: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.25);

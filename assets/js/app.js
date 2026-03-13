@@ -55,11 +55,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  tabs(".tab-btn", ".tab-content", ".tab-nav", "tab-btn-active", "grid");
-  tabs(".contact__tab-btn", ".contact__content", ".contact__tabs", "contact-btn-active", "flex");
+  if (document.querySelector(".tab-btn")) {
+    tabs(".tab-btn", ".tab-content", ".tab-nav", "tab-btn-active", "grid");
+  }
+
+  if (document.querySelector(".contact__tab-btn")) {
+    tabs(".contact__tab-btn", ".contact__content", ".contact__tabs", "contact-btn-active", "flex");
+  }
 
   //swiper
-  swiperTestimornials.update();
+  if (document.querySelector("testimornialsSwiper")) {
+    swiperTestimornials.update();
+  }
 
   // accordion
 
@@ -94,9 +101,35 @@ document.addEventListener("DOMContentLoaded", () => {
   // Запуск
   initAccordion();
 
-  //отправка в телеграмм
+  // Настройка даты для формы записи
+  const dateInput = document.getElementById("date");
+
+  if (dateInput) {
+    const now = new Date();
+
+    // Смещаем время на часовой пояс пользователя, чтобы дата была точной
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+    const day = String(now.getDate()).padStart(2, "0");
+
+    const today = `${year}-${month}-${day}`;
+
+    // Сначала удаляем старый атрибут, если он был, и ставим новый
+    dateInput.removeAttribute("min");
+    dateInput.setAttribute("min", today);
+
+    // Устанавливаем значение по умолчанию
+    dateInput.value = today;
+
+    console.log("Минимальная дата установлена на: " + today); // Для проверки в консоли
+  }
+
+  // отправка в телеграмм
   function sendToTelegramm(formId, btnId, statusId) {
-    document.getElementById(formId).addEventListener("submit", async function (e) {
+    const formElement = document.getElementById(formId);
+    if (!formElement) return;
+    
+    formElement.addEventListener("submit", async function (e) {
       e.preventDefault();
 
       const form = this;
@@ -132,7 +165,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-  sendToTelegramm("tg-form", "submit-btn", "status-message");
+  //в телеграмм запись на косультацию
+  if (document.getElementById("tg-form")) {
+    sendToTelegramm("tg-form", "submit-btn", "status-message");
+  }
+
+  //в телеграмм запись к врачу
+  if (document.getElementById("tg-form-appointment")) {
+    sendToTelegramm("tg-form-appointment", "submit-btn-appointment", "status-message-appointment");
+  }
 
   //footer data
   const footerData = document.getElementById("footerYear");

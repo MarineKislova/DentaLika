@@ -8,8 +8,104 @@
         @@include('html/header.html', {})
         <!--  -->
         <div class="main">
-          <div class="main__container">
-            <h2>make-appointment</h2>
+          <div class="breadcrumbs">
+            <div class="breadcrumbs__container">
+              <ul>
+                <li><a href="/">Главная</a></li>
+                <li>></li>
+                <li><a href="/#services">Услуги</a></li>
+                <li>></li>
+                <li>Запись на прием</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- appointment -->
+          <div class="appointment">
+            <div class="appointment__container">
+              <h2 class="appointment__title">Запись на прием</h2>
+              <form id="tg-form-appointment" class="form-appointment">
+                <input type="text" name="webdentalikaForm2" style="display: none" tabindex="-1" autocomplete="off" />
+
+                <div class="form-appointment__container">
+                  <div class="form-group-row">
+                    <div class="form-group">
+                      <label for="name">Ваше имя *</label>
+                      <input type="text" name="name" id="name" required placeholder="Ваше имя" />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="phone">Телефон *</label>
+                      <input type="tel" name="phone" id="phone" required placeholder="+38 099 123 45 67" />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="service">Услуга *</label>
+                    <select name="service" id="service" required>
+                      <option value="">Выберите услугу</option>
+                      <option value="Отбеливание">Отбеливание зубов</option>
+                      <option value="Имплантация">Имплантация</option>
+                      <option value="Виниры">Виниры</option>
+                      <option value="Лечение кариеса">Лечение кариеса</option>
+                      <option value="Детская стоматология">Детская стоматология</option>
+                      <option value="Ортодонтия">Ортодонтия</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="doctor">Предпочитаемый врач</label>
+                    <select name="doctor" id="doctor">
+                      <option value="">Выберите врача</option>
+                      <option value="Бойко">Доктор Сергей Бойко</option>
+                      <option value="Олейник">Доктор Илья Олейник</option>
+                      <option value="Гончаренко">Доктор Лариса Гончаренко</option>
+                      <option value="Ткаченко">Доктор Наталья Ткаченко</option>
+                      <option value="Иваненко">Доктор Мария Иваненко</option>
+                      <option value="Овчаренко">Доктор Ксения Овчаренко</option>
+                      <option value="Любой">Любой доступный врач</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group-row">
+                    <div class="form-group">
+                      <label for="date">Желаемая дата *</label>
+                      <input type="date" name="date" id="date" required />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="time">Желаемое время *</label>
+                      <select name="time" id="time" required>
+                        <option value="">Выберите время</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                        <option value="18:00">18:00</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-appointment__footer">
+                  <div class="form-group">
+                    <label for="message">Дополнительная информация</label>
+                    <textarea name="message" id="message" rows="4" placeholder="Ваши пожелания..."></textarea>
+                  </div>
+                  <input type="text" name="honey" style="display: none" tabindex="-1" autocomplete="off" />
+
+                  <div id="status-message-appointment"></div>
+                  <button type="submit" id="submit-btn-appointment">Отправить заявку</button>
+
+                  <p class="form-appointment__other-text">* Обязательные поля. Мы свяжемся с вами в течение 1 часа для подтверждения записи.</p>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </main>
