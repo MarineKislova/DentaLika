@@ -78,6 +78,7 @@
     img {
       display: block;
       width: 100%;
+      aspect-ratio: 3 / 2;
       object-fit: cover;
       border-radius: 24px;
     }
@@ -96,7 +97,7 @@
       display: block;
       aspect-ratio: 3 / 2;
       flex: 1 1 50%;
-      max-width: calc(50% - 5px);
+      max-width: calc(100% - 5px);
       object-fit: cover;
       border-radius: 24px;
     }

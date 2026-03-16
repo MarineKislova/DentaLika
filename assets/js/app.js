@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function sendToTelegramm(formId, btnId, statusId) {
     const formElement = document.getElementById(formId);
     if (!formElement) return;
-    
+
     formElement.addEventListener("submit", async function (e) {
       e.preventDefault();
 
@@ -169,6 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("tg-form")) {
     sendToTelegramm("tg-form", "submit-btn", "status-message");
   }
+  
 
   //в телеграмм запись к врачу
   if (document.getElementById("tg-form-appointment")) {
