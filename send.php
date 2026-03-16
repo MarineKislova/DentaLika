@@ -4,8 +4,8 @@ error_reporting(E_ALL);
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") exit("Direct access not allowed");
 
-$token = "8523522301:AAE0vXbeFzxikqieN6l3TCdo5uGsAgOxUcQ";
-$chat_id = "-1003836134993";
+$token = "8475486232:AAGJwcVjYLiUjjI7HkNUysTBgDhDp3JTR6Y";
+$chat_id = "-1003457564482";
 
 // Проверка на спам (honey field)
 if (!empty($_POST['honey'])) {
@@ -71,4 +71,5 @@ if ($result) {
     http_response_code(500);
     echo "Error: " . $error;
 }
+
 ?>

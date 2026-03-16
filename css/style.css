@@ -676,6 +676,7 @@ h6 {
 .tab-content__item-img img {
   display: block;
   width: 100%;
+  aspect-ratio: 3/2;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 24px;
@@ -699,7 +700,7 @@ h6 {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
-  max-width: calc(50% - 5px);
+  max-width: calc(100% - 5px);
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 24px;
