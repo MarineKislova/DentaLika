@@ -773,7 +773,7 @@ h6 {
   font-family: "Poppins" !important;
 }
 
-.doctors__item h5 {
+.doctors__item .h5 {
   font-weight: 600;
 }
 
@@ -879,7 +879,7 @@ h6 {
   gap: 10px;
 }
 
-.testimornial__column h5 {
+.testimornial__column .h5 {
   font-weight: 800;
 }
 
@@ -1954,6 +1954,11 @@ h4 {
 }
 
 h5 {
+  font-size: calc(12px + 4 * (100vw - 320px) / (1920 - 320));
+  color: rgb(47, 79, 62);
+}
+
+.h5 {
   font-size: calc(12px + 4 * (100vw - 320px) / (1920 - 320));
   color: rgb(47, 79, 62);
 }
