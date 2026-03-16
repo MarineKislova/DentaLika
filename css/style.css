@@ -1948,6 +1948,11 @@ h4 {
   color: rgb(47, 79, 62);
 }
 
+.h4 {
+  font-size: calc(15px + 5 * (100vw - 320px) / (1920 - 320));
+  color: rgb(47, 79, 62);
+}
+
 h5 {
   font-size: calc(12px + 4 * (100vw - 320px) / (1920 - 320));
   color: rgb(47, 79, 62);
