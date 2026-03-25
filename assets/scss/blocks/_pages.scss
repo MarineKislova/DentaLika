@@ -280,27 +280,13 @@
     &::before {
       content: "";
       position: absolute;
-      left: -10px;
-      top: 0.2em; /* подбираем положение под первую строку текста */
-      width: 16px;
-      height: 16px;
-      background-image: url("../../icons/benefit.svg"); /* путь к вашему рисунку */
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-
-    &#warning {
-      &::before {
-        content: "";
-        position: absolute;
-        left: -5px;
-        top: 50%;
-        transform: translateY(-50%); /* центрируем точку по вертикали */
-        width: 6px;
-        height: 6px;
-        background-color: red;
-        border-radius: 50%; /* делаем круг из квадрата */
-      }
+      left: -5px;
+      top: 50%;
+      transform: translateY(-50%); /* центрируем точку по вертикали */
+      width: 6px;
+      height: 6px;
+      background-color: red;
+      border-radius: 50%;
     }
   }
 }

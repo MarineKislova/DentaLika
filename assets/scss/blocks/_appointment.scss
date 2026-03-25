@@ -5,7 +5,7 @@
   justify-content: center;
 
   &__container {
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
     @include mh.adaptiv-value("padding", 16, 12, 0);
     z-index: 100;

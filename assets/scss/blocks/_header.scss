@@ -58,7 +58,7 @@
       a {
         font-weight: 600;
         &:hover {
-          color: #FF5A5A;
+          color: #ff5a5a;
           font-weight: 600;
         }
       }
@@ -190,10 +190,10 @@
     animation: burgerAnimation 1s;
     row-gap: 30px;
 
-    ul.li {
+    li {
       color: #462a0b;
       border-bottom: 2px solid #2f4f3e;
-      pad: 5px;
+      padding: 5px;
       width: 20px;
       font-weight: 500;
       @include mh.adaptiv-value("font-size", 20, 18, 0);
