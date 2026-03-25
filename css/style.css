@@ -175,7 +175,7 @@ h6 {
 }
 
 .header__nav ul a:hover {
-  color: #FF5A5A;
+  color: #ff5a5a;
   font-weight: 600;
 }
 
@@ -1531,20 +1531,6 @@ h6 {
 .other__column-item::before {
   content: "";
   position: absolute;
-  left: -10px;
-  top: 0.2em;
-  /* подбираем положение под первую строку текста */
-  width: 16px;
-  height: 16px;
-  background-image: url("../../icons/benefit.svg");
-  /* путь к вашему рисунку */
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.other__column-item#warning::before {
-  content: "";
-  position: absolute;
   left: -5px;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -1555,7 +1541,6 @@ h6 {
   height: 6px;
   background-color: red;
   border-radius: 50%;
-  /* делаем круг из квадрата */
 }
 
 .start__container {
@@ -1620,7 +1605,7 @@ h6 {
 }
 
 .appointment__container {
-  max-width: 600px;
+  max-width: 800px;
   width: 100%;
   padding: calc(12px + 4 * (100vw - 320px) / (1920 - 320));
   z-index: 100;
@@ -2076,10 +2061,10 @@ h5 {
     row-gap: 30px;
   }
 
-  .hamburger ul.li {
+  .hamburger li {
     color: #462a0b;
     border-bottom: 2px solid #2f4f3e;
-    pad: 5px;
+    padding: 5px;
     width: 20px;
     font-weight: 500;
     font-size: calc(18px + 2 * (100vw - 320px) / (1920 - 320));
